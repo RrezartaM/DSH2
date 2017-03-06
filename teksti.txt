@@ -1,0 +1,25 @@
+Java Stream I/O
+Most programs use data in one form or another, whether it is as input, output, or both. The sources of input and output can vary between a local file, a socket on the network, a database, variables in memory, or another program. Even the type of data can vary between objects, characters, multimedia, and others.
+
+The Java Development Kit (JDK) provides APIs for reading and writing streams of data. These APIs have been part of the core JDK since version 1.0, but are often overshadowed by the more well-known APIs, such as JavaBeans, JFC, RMI, JDBC, and so on. However, input and output streams are the backbone of the JDK APIs, and understanding them is not only crucial, but can also make programming with them a lot of fun. 
+This hands-on lab takes you through the basics of using Java I/O stream.
+
+Java Serialization
+
+Object serialization is the process of saving an object's state to a sequence of bytes, as well as the process of rebuilding those bytes into a live object at some future time. The Java Serialization API provides a standard mechanism for developers to handle object serialization. The API is small and easy to use, provided the classes and methods are understood.  This hands-on lab takes you through the basics of using Java serialization.
+
+I/O Basics
+
+Java programs use streams (a file, memory, a socket) to read input or write output.
+The java.io package (which you should import for I/O operations) contains a collection of stream classes that support these algorithms for reading and writing. These classes are divided into two class hierarchies based on the data type (either characters or bytes) on which they operate.
+A byte stream means that the 8-bit representation is mapped without undergoing a character transformation (binary I/O)
+A character stream means that the binary representation of data will be converted to characters, if output, or characters converted to binary, if input (only examples of character stream I/O will be shown)
+Streams are grouped by whether they read from and write to data "sinks" (strings, files, or pipes) or process the information (such as buffering or character encoding) as its being read or written.
+java.io Classes:
+There are many Java I/O library classes, so to simplify this (as the textbook does), let's just look at a few IO classes.  Be sure to import java.io.*; to use these:
+
+File (java.io.File) - This is the class used in the textbook for simplifying creating files.  See Chapter 14 of the textbook for more examples and methods.  
+FileInputStream and FileOutputStream - these streams are used to read from or write to a file on the native- file system
+PrintWriter, PrintStream - Contain convenient printing methods. These are the easiest streams to write to, so you will often see other writable streams wrapped in one of these.
+
+
